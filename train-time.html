@@ -5,17 +5,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Train Time</title>
-	<!--jQuery-->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!--moment.js-->
-	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<!--bootstrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!--CSS-->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!--moment.js-->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!--firebase-->
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
 </head>
 
 <body>
 
-	<div class="jumbotron text-center">
+	<div class="jumbotron jumbotron-billboard text-center">
 		<h1>TRAIN TIME!!!</h1>
 		<p>Chugga chugga chugga chugga CHOO CHOO!!!</p>
 	</div>
@@ -36,5 +38,50 @@
 						<th scope="col">Next Arrival</th>
 						<th scope="col">Minutes Away</th>
 					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 
-				</body>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>
+						Add Train
+					</h4>
+				</div>
+				<form>
+					<div class="form-group">
+						<label for="trainName">Train Name</label>
+						<input class="form-control" type="text" id="trainName">
+					</div>
+					<div class="form-group">
+						<label for="destination">Destination</label>
+						<input class="form-control" type="text" id="destination">
+					</div>
+					<div class="form-group">
+						<label for="firstTrain">First Train Time (HH:mm - military time)</label>
+						<input class="form-control" type="text" id="firstTrain">
+					</div>
+					<div class="form-group">
+						<label for="frequency">Frequency (min)</label>
+						<input class="form-control" type="text" id="frequency">
+					</div>
+					<div class="form-group">
+						<label for="lastTrain">Last Train Time (HH:mm - military time)</label>
+						<input class="form-control" type="text" id="frequency">
+					</div>
+					<button type="submit" id="addTrain" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!--javascript-->
+	<script src="assets/javascript/app.js"></script>
+</body>
+</html>
+
